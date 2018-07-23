@@ -1,0 +1,42 @@
+             <!-- start head bottom -->
+      <div class="bottom">
+        <div class="left">
+          <h1>사용설명서</h1>
+        </div>
+        <div class="right">
+          <!--<h1>dashboard /</h1>-->
+          <!--<a href="#">page name</a>-->
+        </div>
+      </div>
+      
+<div class="card-body">
+  <h3 class="m-b-lg"></h3>
+    <div class="row">
+     <div class="card col-md-12">
+  	 <div class="card-boby text">
+  	 <div class="card-block">
+  		<h4 class="card-title">
+		  <ul>
+      <li><code>Tip : 지도 사용법</code></li><br>
+      </ul>
+          <img src="<%= asset_path '지도 사용 설명서.jpg' %>" width="100%" alt="">
+		</div>
+  	 <div class="card-block">
+  		<h4 class="card-title">
+		  <ul>
+        <li><code>Tip : 흡연구역 / 단속구역 등록법</code></li><br>
+      </ul>
+          <img src="<%= asset_path '장소 등록 방법.jpg' %>"  width="100%" alt="">
+
+      </div>
+  	</div><!-- END column -->
+  </div><!-- .row -->
+<!--<1%= paginate @products %>-->
+</div>
+</div>
+      
+      
+      
+      <% content_for 'javascript_content' do%>
+<%= javascript_include_tag params[:controller] %>
+<%end%>
