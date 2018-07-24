@@ -124,28 +124,28 @@ daum.maps.event.addListener(map, 'zoom_changed', function() {
 });
 
 
-<% @home.each do |smoking_area| %>
+// <1% @home.each do |smoking_area| %>
    
-lat = <%= smoking_area.latitude %>   // 한번씩 뽑아서 위도, 경도에 넣어줌.
-lon = <%= smoking_area.longitude %> 
+// lat = <1%= smoking_area.latitude %>   // 한번씩 뽑아서 위도, 경도에 넣어줌.
+// lon = <1%= smoking_area.longitude %> 
 
 
-// 지도에 표시할 원을 생성합니다
- circle = new daum.maps.Circle({
-    center : new daum.maps.LatLng(lat, lon),  // 원의 중심좌표 입니다 
-    radius: 15, // 미터 단위의 원의 반지름입니다 
-    strokeWeight: 1, // 선의 두께입니다 
-    strokeColor: '#b30000', // 선의 색깔입니다
-    strokeOpacity: 0, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-    strokeStyle: 'solid', // 선의 스타일 입니다
-    fillColor: '#ff5c33', // 채우기 색깔입니다
-    fillOpacity: 0.55  // 채우기 불투명도 입니다   
-}); 
+// // 지도에 표시할 원을 생성합니다
+//  circle = new daum.maps.Circle({
+//     center : new daum.maps.LatLng(lat, lon),  // 원의 중심좌표 입니다 
+//     radius: 15, // 미터 단위의 원의 반지름입니다 
+//     strokeWeight: 1, // 선의 두께입니다 
+//     strokeColor: '#b30000', // 선의 색깔입니다
+//     strokeOpacity: 0, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+//     strokeStyle: 'solid', // 선의 스타일 입니다
+//     fillColor: '#ff5c33', // 채우기 색깔입니다
+//     fillOpacity: 0.55  // 채우기 불투명도 입니다   
+// }); 
 
-// 지도에 원을 표시합니다 
-circle.setMap(map); 
+// // 지도에 원을 표시합니다 
+// circle.setMap(map); 
 
-<% end %>
+// <1% end %>
 
 
 // sw = new daum.maps.LatLng(latitude + 0.0002, longitude + 0.0002), // 사각형 영역의 남서쪽 좌표
