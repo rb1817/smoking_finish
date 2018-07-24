@@ -42,7 +42,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
   
   def kakao
-    redirect_to "https://kauth.kakao.com/oauth/authorize?client_id=#{ENV['KAKAO_REST_API_KEY']}&redirect_uri=http://smok.site/users/auth/kakao/callback&response_type=code"
+    redirect_to "https://kauth.kakao.com/oauth/authorize?client_id=#{ENV['KAKAO_REST_API_KEY']}&redirect_uri=http://www.smok.site/users/auth/kakao/callback&response_type=code"
   end
   
   def kakao_auth
@@ -50,7 +50,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     base_url = "https://kauth.kakao.com/oauth/token"
     base_response = RestClient.post(base_url,{grant_type: 'authorization_code',
                                               client_id: ENV['KAKAO_REST_API_KEY'] ,
-                                              redirect_uri: 'http://smok.site/users/auth/kakao/callback',
+                                              redirect_uri: 'http://www.smok.site/users/auth/kakao/callback',
                                               code: code })
     res = JSON.parse(base_response)
     access_token = res["access_token"]
