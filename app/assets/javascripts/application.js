@@ -16,6 +16,8 @@
 //= require bootstrap
 //= require toastr
 
+
+
 toastr.options = {
   "closeButton": true,
   "debug": false,
