@@ -126,13 +126,13 @@ daum.maps.event.addListener(map, 'zoom_changed', function() {
 
 <% @home.each do |smoking_area| %>
    
-latitude = <%= smoking_area.latitude %>   // 한번씩 뽑아서 위도, 경도에 넣어줌.
-longitude = <%= smoking_area.longitude %> 
+lat = <%= smoking_area.latitude %>   // 한번씩 뽑아서 위도, 경도에 넣어줌.
+lon = <%= smoking_area.longitude %> 
 
 
 // 지도에 표시할 원을 생성합니다
  circle = new daum.maps.Circle({
-    center : new daum.maps.LatLng(latitude, longitude),  // 원의 중심좌표 입니다 
+    center : new daum.maps.LatLng(lat, lon),  // 원의 중심좌표 입니다 
     radius: 15, // 미터 단위의 원의 반지름입니다 
     strokeWeight: 1, // 선의 두께입니다 
     strokeColor: '#b30000', // 선의 색깔입니다
@@ -211,20 +211,7 @@ var polygon = new daum.maps.Polygon({
 polygon.setMap(map);
 
 
-// 지도에 표시할 원을 생성합니다
- circle = new daum.maps.Circle({
-    center : new daum.maps.LatLng(latitude, longitude),  // 원의 중심좌표 입니다 
-    radius: 15, // 미터 단위의 원의 반지름입니다 
-    strokeWeight: 1, // 선의 두께입니다 
-    strokeColor: '#b30000', // 선의 색깔입니다
-    strokeOpacity: 0, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-    strokeStyle: 'solid', // 선의 스타일 입니다
-    fillColor: '#ff5c33', // 채우기 색깔입니다
-    fillOpacity: 0.55  // 채우기 불투명도 입니다   
-}); 
 
-// 지도에 원을 표시합니다 
-circle.setMap(map); 
 
 
 
